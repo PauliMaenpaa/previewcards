@@ -3,53 +3,58 @@
   --Bright-orange: hsl(31, 77%, 52%);
   --Dark-cyan: hsl(184, 100%, 22%);
   --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Very-light-gray: hsl(0, 0%, 95%);
 }
 
 body {
   overflow: hidden;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 15px;
+  background-color: var(--Very-light-gray);
+}
+
+main {
+  display: flex;
 }
 
 article {
   display: flex;
   flex-direction: column;
-  min-height: 28rem;
-  min-width: 18rem;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 2rem 2rem;
 }
 
+
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-family: 'Big Shoulders Display', cursive;
   font-weight: 700;
-  margin-left: 2.5rem;
+  color: rgba(255, 255, 255, 0.75);
   margin-top: 2rem;
-  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 0;
 }
 
 p {
   font-family: 'Lexend Deca', sans-serif;
   font-weight: 400;
-  margin-left: 2.5rem;
-  color: rgba(255, 255, 255, 0.85);
-}
-
-svg {
-  margin-left: 2.5rem;
+  color: rgba(255, 255, 255, 0.75);
   margin-top: 2rem;
 }
 
 button {
   width: 8rem;
   height: 2.5rem;
-  margin-left: 2.5rem;
-  margin-top: 4.5rem;
+  margin-top: 4rem;
   border-radius: 4rem;
   border: 0;
   font-family: 'Lexend Deca', sans-serif;
+  font-size: 1rem;
   cursor: pointer;
   transition: background-color 500ms, color 500ms;
 }
@@ -91,7 +96,7 @@ button {
 button:hover {
   background-color: transparent;
   color: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.75);
 }
 
 @media (max-width: 375px) {
@@ -100,6 +105,11 @@ button:hover {
     flex-direction: column;
     overflow: auto;
     height: auto;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
   }
 
   .sedans {

@@ -1,0 +1,115 @@
+
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  min-height: 28rem;
+  min-width: 18rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  margin-left: 2.5rem;
+  margin-top: 2rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+p {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  margin-left: 2.5rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+svg {
+  margin-left: 2.5rem;
+  margin-top: 2rem;
+}
+
+button {
+  width: 8rem;
+  height: 2.5rem;
+  margin-left: 2.5rem;
+  margin-top: 4.5rem;
+  border-radius: 4rem;
+  border: 0;
+  font-family: 'Lexend Deca', sans-serif;
+  cursor: pointer;
+  transition: background-color 500ms, color 500ms;
+}
+
+.sedans {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Bright-orange);
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.suvs {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Dark-cyan);
+}
+
+.luxury {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Very-dark-cyan);
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.button-sedans {
+  color: var(--Bright-orange);
+}
+
+.button-suvs {
+  color: var(--Dark-cyan);
+}
+
+.button-luxury {
+  color: var(--Very-dark-cyan);
+}
+
+button:hover {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 375px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: auto;
+  }
+
+  .sedans {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.5rem;
+  }
+
+  .luxury {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+}
